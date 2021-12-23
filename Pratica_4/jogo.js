@@ -1,9 +1,9 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.width = 400;
-ctx.height=225;
+ctx.height = 225;
 
-const intervalo=10;
+const intervalo = 10;
 let tempo =0;
 let maxtempo = 10000;
 
@@ -79,12 +79,12 @@ var fundo =  new function(){
 
 var heroi =  new function(){
     let that = this;
-    this.agente = new Personagem('heroi.png', 400,45, 95,50 );
+    this.agente = new Personagem('heroi.png', 500,45, 95,50 );
     this.corrente = 0;
     this.estados= new Array();
     this.estados[0] = new Estado(4,12,0,0,500, this);  
-    this.estados[1] = new Estado(0,4 ,0,0,200, this);
-    this.estados[2] = new Estado(0,4 ,0,100,500, this);
+    this.estados[1] = new Estado(0,4,0,0,200, this);
+    this.estados[2] = new Estado(13,17,0,0,200, this);
 
     this.estados[1].complemento=  function() {
         that.agente.x= Math.max(0, that.agente.x-5);
@@ -109,6 +109,8 @@ function desenha(){
 function acertaJanela(){
     if (heroi.agente.x-fundo.sx<0){
         fundo.sx = heroi.agente.x; 
+    } else if (heroi.agente.x-fundo.sx>350){
+        fundo.sx = heroi.agente.x-350; 
     }
 }
 
