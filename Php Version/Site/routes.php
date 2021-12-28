@@ -1,15 +1,17 @@
 <?php
 
-	if ($params = resolve ('/(.*)')){
-		$pages = $pages_all();
-
-		foreach ($pages as $page) {
-			if ($page['url'] == $params[1])
-				break;
-		}
-
-		render ('Site/Page','SiteT', compact('pages', 'page'));
+	if (resolve ('/inf216_pratica_4')){
+		render ('Pedacos/inf216_pratica_4','tema1');
+	}elseif (resolve ('/inf216_pratica_2')){
+		render ('Pedacos/inf216_pratica_2','tema1');
+	}elseif (resolve ('/inf216_pratica_1')){
+		render ('Pedacos/inf216_pratica_1','tema1');
+	}elseif (resolve ('/exercicios_INF216')){
+		render ('Pedacos/inf216','tema1');
+	}elseif (resolve ('/(.*)')){
+		render ('Pedacos/home','tema1');
 	}
+
 	/*
 	if (resolve ('/contato')){
 		if ($_SERVER['REQUEST_METHOD'] === 'POST'){

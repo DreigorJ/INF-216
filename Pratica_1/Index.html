@@ -1,13 +1,46 @@
+<!doctype html>
 <html>
     <head>
-        <title>Pratica 1</title>
+        <title>Exerc&iacutecios - INF 216 - Pratica 1</title>
     </head>
+
+    <link rel="stylesheet" href="./../Css/bg.css">
+    <link rel="stylesheet" href="./style.css">
+
     <body onload='fundo.desenha()'>
-        <canvas id="canvas" width="400" height="225">
-	Canvas não suportado.
-        </canvas>
         
-        <script type="text/javascript" src="teste.js" >
-        </script>            
+        <div class="area" >
+
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <div class="title">
+                <h1>Exerc&iacutecios - INF 216 - Pratica 1</h1>
+            </div>
+
+
+            <div class="shadow">
+                <canvas id="canvas" width="600" height="600">
+                   Canvas não suportado.
+                </canvas>
+            </div>
+            
+            <script type="text/javascript" src="./game.js" ></script>  
+
+           
+            <a href="./../Templates/exercicios_INF216.html"> <img class="return" src="./../Midia/return.png" onmouseover="this.src='./../Midia/return_hover.png';" onmouseout="this.src='./../Midia/return.png';" ></a>
+
+        </div >
+
     </body>
 </html>

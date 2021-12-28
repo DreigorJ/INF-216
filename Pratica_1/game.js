@@ -105,7 +105,7 @@ var t =  new function(){
     this.sx=50;
     this.direcao= 0; //0: cima; 1:baixo; 2: direita; 3: esquerda
     this.img = new Image();
-    this.img.src = './Turtle.png';  
+    this.img.src = './turtle.png';  
       
     this.sobe = function() {
         this.direcao=0;

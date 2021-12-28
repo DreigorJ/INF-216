@@ -3,7 +3,6 @@ body, html{
   height: 100%;
   text-align: center;
   overflow: hidden;
-  z-index: 0;
   background: #161616;
 }
 
@@ -12,7 +11,7 @@ input {
   opacity: 0;
   margin-top: 90vh;
   cursor: pointer;
-  z-index: 3;
+  background-color: black;
 }
 
 label {
@@ -23,16 +22,12 @@ label {
   border-radius: 5px;
   background-color: transparent;
   margin: 90vh 7px 0 7px;
-  z-index: 3;
   cursor: pointer;
   transition-duration: .4s;
 }
 
 input:checked + label{
   background-color: white;
-}
-
-input:focus + label{
   box-shadow: 0 0 0 3px rgba(0,0,0,0.2), 0 0 15px white;
 }
 
@@ -57,7 +52,7 @@ input:focus + label{
   z-index: -1;
   transform: translateX(-100%);
   transition-duration: .4s;
-  opacity: 1;
+  opacity: 0;
 }
 
 input:checked ~ .slide {
